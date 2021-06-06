@@ -50,8 +50,9 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: {
-                    loader: 'html-loader'
-                        //options: { attributes: false } //minimize: true,
+                    loader: 'html-loader',
+                    options: { attributes: false },
+                    minimize: true,
                 }
             }
         ]
