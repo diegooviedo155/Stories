@@ -31,7 +31,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(s*)css$/,
+                test: /\.(s*)css$/i,
                 use: [
                     {loader: MiniCssExtractPlugin.loader}, 
                     "css-loader", 
@@ -41,7 +41,11 @@ module.exports = {
             },
             {
                 test: /\.(svg|png|jpg|gif)$/,
-                loader: 'url-loader'
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: { name: '[hash].[ext]' }
+                    }]
             },
             {
                 test: /\.html$/,
