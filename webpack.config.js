@@ -36,9 +36,7 @@ module.exports = {
                     {loader: MiniCssExtractPlugin.loader}, 
                     "css-loader", 
                     "sass-loader"
-                ],
-                // use: ['style-loader', 'css-loader', 'sass-loader']
-            },
+                ],            },
             {
                 test: /\.(svg|png|jpg|gif)$/,
                 use: [
@@ -50,9 +48,7 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: {
-                    loader: 'html-loader',
-                    options: { attributes: false },
-                    minimize: true,
+                    loader: 'html-loader'
                 }
             }
         ]
