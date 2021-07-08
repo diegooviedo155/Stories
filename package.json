@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack-dev-server --open --config webpack/webpack.dev.js",
-        "build": "webpack --mode production --config webpack.config.js"
+        "build": "webpack --mode production --config webpack/webpack.prod.js"
     },
     "author": "",
     "license": "ISC",

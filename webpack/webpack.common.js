@@ -10,21 +10,21 @@ module.exports = {
     // },
     output: {
         publicPath: '/',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, './dist'),
         filename: 'dist/javascript/bundle.js',
         clean: true,
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: './assets/index.template.html',
-            filename: 'index.html',
-            title: 'Production'
-        })
-    ],
     module: {
         rules: [{
             test: /\.(svg|png|jpg|gif)$/,
             loader: 'url-loader'
         }]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './assets/index.template.html',
+            filename: 'index.html',
+            // title: 'Production'
+        })
+    ]
 };
